@@ -41,7 +41,7 @@
             </el-menu-item>
             <el-menu-item index="4" @click="goTo('/other')">
                 <i class="el-icon-more-outline"></i>
-                <span slot="other">其他</span>
+                <span slot="title">其他</span>
             </el-menu-item>
           </el-menu>
         </el-col>
