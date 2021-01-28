@@ -4,7 +4,9 @@
  * @FilePath: \AneuFilerVue\src\renderer\pages\other.vue
 -->
 <template>
-  
+  <div>
+      HelloWorld!
+  </div>
 </template>
 
 <script>
