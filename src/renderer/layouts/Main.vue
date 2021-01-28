@@ -173,11 +173,8 @@ export default {
 .el-main {
   height: 100vh;
 }
-::-webkit-scrollbar{width:8px;height:4px}
-::-webkit-scrollbar-button{width:8px;height:0}
-::-webkit-scrollbar-track{background:0 0}
-::-webkit-scrollbar-thumb{background:#61a8df;-webkit-transition:.3s;transition:.3s}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:#61a8df;-webkit-transition:.3s;transition:.3s;border-radius: 4px;}
 ::-webkit-scrollbar-thumb:hover{background-color:#37dace}
 ::-webkit-scrollbar-thumb:active{background-color:#17bbaf}
-
 </style>
