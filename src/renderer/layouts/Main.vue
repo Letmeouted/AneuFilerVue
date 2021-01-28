@@ -116,6 +116,15 @@ export default {
           offset: '400'
         })
       }
+      if (path === '/other') {
+        this.$message({
+          showClose: true,
+          center: true,
+          message: '进入其他页面',
+          duration: '1000',
+          offset: '400'
+        })
+      }
     }
   }
 }
