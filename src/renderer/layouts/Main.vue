@@ -39,10 +39,6 @@
               <i class="el-icon-info"></i>
               <span slot="title">关于</span>
             </el-menu-item>
-            <el-menu-item index="4" @click="goTo('/other')">
-                <i class="el-icon-more-outline"></i>
-                <span slot="title">其他</span>
-            </el-menu-item>
           </el-menu>
         </el-col>
       </el-row>
@@ -112,15 +108,6 @@ export default {
           showClose: true,
           center: true,
           message: '进入关于页面',
-          duration: '1000',
-          offset: '400'
-        })
-      }
-      if (path === '/other') {
-        this.$message({
-          showClose: true,
-          center: true,
-          message: '进入其他页面',
           duration: '1000',
           offset: '400'
         })
