@@ -1,4 +1,8 @@
-
+<!--
+ * @Author: Letmeouted
+ * @Email: 1002726239@qq.com
+ * @FilePath: \AneuFilerVue\src\renderer\App.vue
+-->
 <template>
   <div id="app">
     <router-view></router-view>
