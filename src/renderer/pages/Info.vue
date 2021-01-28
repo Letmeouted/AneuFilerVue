@@ -60,6 +60,9 @@ export default {
 }
 .about {
   color: #eee;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 480px;
   .declare {
     font-size: 20px;
   }
@@ -78,5 +81,4 @@ export default {
     font-size: 15px;
   }
 }
-
 </style>
