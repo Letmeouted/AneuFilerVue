@@ -21,7 +21,10 @@
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
           <div class="el-upload__tip" slot="tip">
-            只能上传txt/csv文件(上传文件之前请查看上传文件命名格式要求：不能含有空格，特殊符号，中文)
+            只能上传
+            <span class="font"> txt / csv </span>
+            文件
+            <span class="font">(上传文件之前请查看上传文件命名格式要求：不能含有空格，特殊符号，中文)</span>
           </div>
         </el-upload>
       </div>
@@ -62,14 +65,14 @@ export default {
     handleChange (file, fileList) {
       this.fileList = fileList.slice(-1)
     },
-    beforeAvatarUpload (file) {
-      var filetype = file.name.substring(file.name.lastIndexOf('.') + 1)
-      console.log(filetype)
-      var extension = filetype === 'txt' || 'csv'
-      if (!extension) {
-        this.$message.error('上传的文件只能是txt格式或csv格式!')
+    beforeAvatarUpload (file, fileList) {
+      let extension = file.name.split('.')[1]
+      let extensionList = ['txt', 'csv']
+      if (extensionList.indexOf(extension) < 0) {
+        this.$message.error('你选择的文件格式不符合要求，请重新选择文件！')
+        return false
       }
-      return extension
+      console.log(file)
     },
     httpRequest (data) {
       var dataA = JSON.parse(sessionStorage.getItem('format'))
@@ -214,7 +217,12 @@ export default {
   }
   .el-upload__tip {
     color: #eee !important;
+    font-size: 15px;
+    .font{
+      color:red;
+    }
   }
+  
 }
 .function {
   margin-top: 20px;
