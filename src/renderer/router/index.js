@@ -8,7 +8,6 @@ import Router from 'vue-router'
 import Upload from '../pages/Upload'
 import Setting from '../pages/Setting'
 import Info from '../pages/Info'
-import Other from '../pages/Other'
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = Router.prototype.push
 Router.prototype.push = function push (location) {
@@ -44,11 +43,6 @@ export default new Router({
           path: 'info',
           name: 'Info',
           component: Info
-        },
-        {
-          path: 'other',
-          name: 'Other',
-          component: Other
         }
       ]
     }
