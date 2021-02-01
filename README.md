@@ -3,7 +3,7 @@
  * @Email: 1002726239@qq.com
  * @FilePath: \AneuFilerVue\README.md
 -->
-# Aneufilervue
+# AneuFilerVue
 
 > An electron-vue project of AneuFiler
 `AneuFiler` 专门用于“21、18、13和性染色体倍型检测试剂盒（荧光PCR-毛细管电泳法）”产生数据的分析：
