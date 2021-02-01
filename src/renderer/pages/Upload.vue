@@ -218,9 +218,6 @@ export default {
   .el-upload__tip {
     color: #eee !important;
     font-size: 15px;
-    .font{
-      color:red;
-    }
   }
   
 }
