@@ -14,8 +14,8 @@
 
 // Install `electron-debug` with `devtron`
 //NB:Don't open dev tools with this ,it is causing the error
-require('electron-debug')
-
+require('electron-debug') ({showDevTools:true})
+import {BrowserWindow} from 'electron'
 // Install `vue-devtools`
 require('electron').app.on('ready', () => {
   let installExtension = require('electron-devtools-installer')
@@ -24,6 +24,7 @@ require('electron').app.on('ready', () => {
     .catch(err => {
       console.log('Unable to install `vue-devtools`: \n', err)
     })
+  // BrowserWindow.addDevToolsExtension('node_modules/vue-devtools/vender')
 })
 
 // Require `main` process to boot app
