@@ -29,6 +29,22 @@
           <el-radio label="GBK" class="GBK" @change="ChangeGBK">GBK</el-radio>
         </el-radio-group>
       </div>
+      <!-- <div class="form">
+        <span class="select">外观</span>
+         <el-select v-model="value" placeholder="请选择">
+            <el-option  :value="item.value" v-for="item in options" :key="item.value" :label="item.label"></el-option>
+          </el-select>
+          <el-switch
+          style="display：block"
+          v-model="value1"
+          active-color="#13ce66"
+          inactive-color="#ff4949"
+          active-text="深色"
+          @change="Changeappearance($event)"
+          active-value="1"
+          inactive-value="0">
+          </el-switch>
+      </div> -->
     </div>
   </div>
 </template>
@@ -39,6 +55,18 @@ export default {
     return {
       value: '1',
       radio: ''
+      // options: [{
+      //   value: '默认',
+      //   label: '自动'
+      // }, {
+      //   value: '选项1',
+      //   label: '🌞浅色'
+      // }, {
+      //   value: '选项2',
+      //   label: '🌚深色'
+      // }
+      // ]
+      // value1: '1'
     }
   },
   created () {
@@ -102,6 +130,27 @@ export default {
         this.$message({
           showClose: true,
           message: '每个输入文件将只输出一个结果文件',
+          type: 'success',
+          center: true,
+          offset: '400'
+        })
+      }
+    },
+    Changeappearance ($event) {
+      var dark = $event
+      console.log('模拟测试 ' + dark)
+      if ($event === '1') {
+        this.$message({
+          showClose: true,
+          message: '外观颜色为深色',
+          type: 'success',
+          center: true,
+          offset: '400'
+        })
+      } else {
+        this.$message({
+          showClose: true,
+          message: '外观颜色为浅色',
           type: 'success',
           center: true,
           offset: '400'

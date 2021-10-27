@@ -31,7 +31,13 @@ function createWindow () {
     width: 800,
     maxHeight: 450,
     maxWidth: 800,
-    frame: false
+    frame: false,
+    webPreferences: {
+      webSecurity: false,
+      nodeIntegration: true,
+      enableRemoteModule: true,
+      contextIsolation: false
+    }
   })
 
   mainWindow.loadURL(winURL)

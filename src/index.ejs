@@ -8,6 +8,27 @@
   <head>
     <meta charset="utf-8">
     <title>aneufilervue</title>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget () {
+      var options = {
+        bottom: '50px', // default: '32px'
+        right: '30px', // default: '32px'
+        left: 'unset', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#ffffff', // default: '#fff'
+        backgroundColor: 'unset', // default: '#fff'
+        buttonColorDark: '#848484', // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: false, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+      }
+      const darkmode = new Darkmode(options)
+      darkmode.showWidget()
+    }
+    window.addEventListener('load', addDarkmodeWidget)
+    </script>
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
       <!-- Add `node_modules/` to global paths so `require` works properly in development -->
       <script>
@@ -18,11 +39,11 @@
   <body>
     <div id="app"></div>
     <!-- Set `__static` path to static files in production -->
-    <% if (!process.browser) { %>
+    <!-- <% if (!process.browser) { %>
       <script>
         if (process.env.NODE_ENV !== 'development') window.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
       </script>
-    <% } %>
+    <% } %> -->
 
     <!-- webpack builds are automatically injected -->
   </body>
